@@ -21,6 +21,7 @@ let users = [
     }
 ];
 
+var copylogin = false;
 var bob = false;
 let flogin = document.querySelector(".form-login")
 let flg = document.querySelector("#lg")
@@ -105,21 +106,30 @@ function avtoriz() {
     else
     {
         for (const user of users){
-            if(user.lg != flg.value)
+            console.log(user.lg)
+            if(user.lg == flg.value)
             {
-            users.push({
-                "pl":'user',
-                "lg" : `${flg.value}`,
-                "pw" : `${fpw.value}`,
-                "name" : `${fnm.value}`})
-            bob = false;
+                console.log("Логин занят")
+                copylogin = true;
+                
+            }
+        }
+            if (copylogin == false)
+            {
+                users.push({
+                    "pl":'user',
+                    "lg" : `${flg.value}`,
+                    "pw" : `${fpw.value}`,
+                    "name" : `${fnm.value}`})
+                bob = false;
+                copylogin = false;
+                console.log("Регистрация прошла успешно")
             }
             else
             {
                 fmes.innerHTML = "Wrong Login";
                 bob = false;
             }
-        }
     }
     
 }
