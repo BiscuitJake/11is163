@@ -4,7 +4,7 @@ let users = [
     {
         "pl" : "admin",
         "lg" : "admin",
-        "pw" : "admin1234",
+        "pw" : "admin",
         "name" : "Gutov"
     },
     {
@@ -23,6 +23,7 @@ let users = [
 
 var copylogin = false;
 var bob = false;
+var user_name = "";
 let flogin = document.querySelector(".form-login")
 let flg = document.querySelector("#lg")
 let fpw = document.querySelector("#pw")
@@ -66,11 +67,12 @@ fbtl.addEventListener("click", avtoriz);
 function role(role){
     if(role == "user")
     {
-        main.setAttribute('style', 'display: block;');
+        localStorage.setItem('name', user_name);
+        document.location.href = "/pages/user.html"
     }
     else if (role == "admin")
     {
-        admin.setAttribute('style', 'display: block;');
+        document.location.href = "/pages/admin.html"
     }
 }
 
@@ -89,11 +91,11 @@ function avtoriz() {
         console.log(user.lg)
         console.log(user.pw)
         console.log("Fin")
+        user_name = user.name;
+        
 
         if(user.lg == lg && user.pw == pw)
         {
-            fmes.innerHTML = "YES"
-            formlogin.setAttribute('style', 'display: none;');
             role(user.pl)
             break;
         }

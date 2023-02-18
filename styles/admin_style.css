@@ -1,0 +1,40 @@
+.logo{
+    width: 60px;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+    text-align: left;
+}
+body{
+    margin: 0 0 0 0;
+}
+header{
+    display: flex;
+    background-color: #313131;
+    margin: 0 0 0 0;
+    background-color: #313131;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_words{
+    top: 0px;
+    right: 0px;
+    margin: 0 0 0 0;
+    align-self:center;
+}
+
+.logout_button{
+    margin-right: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: #e1e3e6;
+}
+.img_user{
+    width: 20%;
+    height: auto;
+}
+
+.main{
+    text-align: center;
+    align-items: center;
+}

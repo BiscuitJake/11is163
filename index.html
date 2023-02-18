@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>News NKE</title>
 </head>
-
 <body>
     <div class="form-login" style="display: block;">
-    <h1 class="title-from">Log In</h1>
+    <input type="checkbox" id="chekbox1">
+    <p>
+    <label class="chekboxbutton" for="chekbox1">Авторизация</label>
+    </p>
     <div class = "lpn">
     <form action="">
+        <label class="closeX" for="chekbox1">X</label>
+        <h1 class="title-from">Log In</h1>
+
         <label for="lg" id="lgl">Login</label>
         <input type="text" name="lg" id="lg" required pattern="^[^А-Яа-яЁё]+" title="Only latin letter"> <br>
 
@@ -28,31 +33,11 @@
         <input type="button" value="Log in" id="btl">
         <input type="button" value="Registration" id="btr">
         <input type="reset" value="Cancel">
-
+        
     </form>
     </div>
     <div id="mes">Hello, Guest!</div>
-
     </div>
-    <div class="main-page" style="display: none;">
-    <h1>Новости дня</h1>
-    <p>Сегодня ничего не произошло.</p>
-    <p>Данная страница существует для теста</p>
-    <p>А вот тут вот будет картинка:</p>
-    <p><img src="img/CatInTank.webp" alt="CatInTank"></p>
-    <p>BOB</p>
-    </div>
-   
-   
-   
-   
-    <div class="admin-page" style="display: none;">
-    <h1>ВЫ АДМИН!!!1!</h1>
-    <p>Тут ничего нет.</p>
-    <p>страница для теста роли</p>
-    <p>Интересный факт для админа: дорожки около нашего колледжа складываются в ракету</p>
-    <p><img src="img/Rocket.png" alt="Rocket"></p>
-    </div>
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>

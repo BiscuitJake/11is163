@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/user_style.css">
+    <title>Document</title>
+</head>
+<header>
+    <img src="/img/ZdorovoIVechno.jpg" alt="ZdorovoIVechno" class="logo">
+    <div class="logo_words"><p>Здорово и Вечно</p></div>
+    <button class="logout_button">Log Out</button>
+</header>
+<body>
+    <h1 class="hello_user"></h1>
+    <div class="main">    
+        <p>Вы находитесь на странице Юзера</p>
+        <img class="img_user" src="/img/mishelovka.jpg" alt="Мышеловка">
+
+    <div class="all_rates">
+        <div class="help" style="display: block">
+        <div class="rate_user">
+            <form action="" class="form_comment">
+                <label for="com" >Comment</label>
+                <input type="text" name="com" id="com" required pattern="^[^А-Яа-яЁё]+" title="Only latin letter"> <br>
+                <label for="rt">Rating</label>
+                <input type="text" name="rt" id="rt" required pattern="[0-5]" title="Только числа"> <br>
+            </form>
+            <button class="rb" style="display:block;">Rate Button</button>
+        </div>
+        </div>
+        <div class="rate_all_user">
+            <p id="rau"></p>
+        </div>
+    </div>
+    </div>
+    <script src="/scripts/script_user.js"></script>
+</body>
+</html>
