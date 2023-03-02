@@ -1,0 +1,15 @@
+header{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(173, 9, 9);
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
