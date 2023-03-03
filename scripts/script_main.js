@@ -31,7 +31,6 @@ r_sub.addEventListener("click",reg_button);
 
 
 
-
 function guest_button(){
     document.location.href = "/pages/store_pages.html"
 }
@@ -40,22 +39,44 @@ function guest_button(){
 function reg_button(){
   var rl = r_lgn.value;
   var rp = r_psw.value;
+  fetch('https://dummyjson.com/users')
+  .then(res => res.json())
+  .then((json) => save_json_reg(json,rl,rp))
  
 console.log("true")
-fetch('https://dummyjson.com/users/add', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
+}
+
+function save_json_reg(json,rl,rp){
+  var all_users = json.users;
+  var check_login = false;
+  console.log("------")
+  console.log(all_users)
+
+
+  for (const user of all_users)
+  {
+    if(rl == user.username)
+    {
+      check_login = true
+    }
+  }
+   if(check_login != true)
+   {
+    fetch('https://dummyjson.com/users/add', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
     username: `${rl}`,
     password: `${rp}`,
   })
-})
-.then(res => res.json())
-.then(console.log);
-}
-
-function save_json_reg(json){
-
+  })
+  .then(res => res.json())
+  .then(console.log);
+   }
+   else{
+    alert("Логин уже занят")
+    check_login = false;
+   }
 }
 
 function enter_button(){
