@@ -13,9 +13,8 @@ function showProduct(json){
         {
         console.log("----->" + product.title);
         content.innerHTML += `
-        <p style="display:none;">${product.id}</p>
         <div class = "item_div">
-        <p><a href = "/pages/smartphones/${product.id}.html"> <img src=${product["images"][0]} class="item_img"></a></p>
+        <p id="id_container"><a href = "/pages/smartphones/${product.id}.html"> <img src=${product["images"][0]} class="item_img"> <p id="id">${product.id}</p></a></p>
         <div class = "item_div2">
         <p class="item_name">${product.title}</p>
         <p class="item_description">${product.description}</p>
