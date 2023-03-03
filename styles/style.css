@@ -18,7 +18,7 @@ h1{
     margin-left: 25px;
 }
 
-button{
+button, label{ 
     height: 50px;
     width: 300px;
     font-size: 120%;
@@ -27,6 +27,8 @@ button{
     cursor: pointer;
     margin-top: 12.5px;
     margin-bottom: 12.5px;
+    border: 2px solid black;
+
 }
 
 .main{

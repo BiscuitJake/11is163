@@ -1,0 +1,57 @@
+.popup_div , .popup_div_enter{
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.popup_form , .popup_form_enter {
+    display: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    background-color: rgb(120, 120, 120);
+    padding: 30px;
+    position: relative;
+    top: -999px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.popup_form input , .popup_form_enter input{
+    display: block;
+    width: 100%;
+    border: 2px solid black;
+    height: 26px;
+    line-height: 26px;
+    margin: 10px 0;
+}
+
+.submit{
+    background: rgb(173, 9, 9);
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+#reg_checkbox:checked ~ .popup_form{
+    display: block;
+    top: 0px;
+}
+
+
+#enter_checkbox:checked ~ .popup_form_enter{
+    display: block;
+    top: 0px;
+}
+
+
+#reg_checkbox , #enter_checkbox{
+    display: none;
+}
+
+.close{
+    position: absolute;
+    margin-left: 130px;
+    margin-top: -170px;
+    font-size: 15px;
+    height: 15px;
+    width: 15px;
+}
