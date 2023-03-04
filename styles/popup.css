@@ -17,11 +17,12 @@
 }
 
 .popup_form input , .popup_form_enter input{
-    display: block;
-    width: 100%;
+    width: 250px;
     border: 2px solid black;
-    height: 26px;
-    line-height: 26px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px 0;
 }
 
@@ -54,4 +55,8 @@
     font-size: 15px;
     height: 15px;
     width: 15px;
+}
+
+.submit_enter , .submit_reg{
+    background-color: rgb(173, 9, 9);
 }
