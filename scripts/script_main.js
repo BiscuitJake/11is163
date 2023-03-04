@@ -72,6 +72,7 @@ function save_json_reg(json,rl,rp){
   })
   .then(res => res.json())
   .then(console.log);
+   alert("Пользователь зарегистрирован")
    }
    else{
     alert("Логин уже занят")
