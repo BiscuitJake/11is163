@@ -76,3 +76,8 @@ h1{
 #id{
     display: none;
 }
+
+.link_logo{
+    text-decoration: none;
+    color: black;
+}
